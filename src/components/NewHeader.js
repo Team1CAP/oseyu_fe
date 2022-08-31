@@ -1,12 +1,14 @@
-const NEwHeader = ({ headText, leftChild, rightChild }) => {
+const NewHeader = ({ headText, leftChild, rightChild }) => {
   return (
-    <header>
-      <div className="head_btn_left">{leftChild}</div>
-      <div>{headText}</div>
-      <div className="head_text">{}</div>
-      <div className="head_btn_right">{rightChild}</div>
-    </header>
+    <nav className="flex items-center justify-between flex-wrap py-6">
+      <div className="flex items-center flex-shrink-0 text-black">
+        <span className="font-semibold text-2xl tracking-tight">
+          {headText}
+        </span>
+      </div>
+      <div className="block">{rightChild}</div>
+    </nav>
   );
 };
 
-export default NEwHeader;
+export default NewHeader;
