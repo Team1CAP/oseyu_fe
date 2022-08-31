@@ -2,7 +2,7 @@ import "./App.css";
 import Router from "./router/Router";
 function App() {
   return (
-    <div className="App">
+    <div className="container text-center min-h-screen justify-center font-san">
       <Router />
     </div>
   );
