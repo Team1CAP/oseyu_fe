@@ -5,6 +5,7 @@ import Edit from "../pages/EditPage/Edit";
 import Detail from "../pages/DetailPage/Detail";
 import Landing from "../pages/LandingPage/Landing";
 import Admin from "../pages/AdminPage/Admin";
+import My from "../pages/MyPage/My";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/edit" element={<Edit />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/my" element={<My />} />
       </Routes>
     </BrowserRouter>
   );
