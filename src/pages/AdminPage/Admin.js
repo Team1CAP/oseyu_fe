@@ -74,7 +74,7 @@ const Admin = () => {
           <div>
             <input
               className="shadow  appearance-none border-2  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white  focus:border-main-mid-green"
-              id="phone -umber"
+              id="name"
               type="text"
               placeholder="김승환"
             />
@@ -108,7 +108,7 @@ const Admin = () => {
                 navigate("/main");
               }}
             >
-              시작하기
+              회원가입
             </button>
           </div>
         </div>
