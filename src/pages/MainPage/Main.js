@@ -1,5 +1,5 @@
 import NewButton from "../../components/NewButton";
-import NEwHeader from "../../components/NewHeader";
+import NewHeader from "../../components/NewHeader";
 import { useNavigate } from "react-router-dom";
 import { Tab } from "../../components/Tab";
 
@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div className="px-5 text-left">
       {/* header */}
-      <NEwHeader
+      <NewHeader
         headText={"메인"}
         rightChild={
           <button>
@@ -75,6 +75,15 @@ const Main = () => {
           text={"회원가입페이지"}
           onClick={() => {
             navigate("/admin");
+          }}
+          type={"positive"}
+        />
+      </div>
+      <div>
+        <NewButton
+          text={"마이페이지"}
+          onClick={() => {
+            navigate("/my");
           }}
           type={"positive"}
         />
