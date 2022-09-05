@@ -58,10 +58,10 @@ export const Tab = () => {
       tag: "#감자 #강원도",
     },
     {
-      region: "충남",
-      content: "1박 2일 우당탕탕 수박 뽑기",
-      pay: "100,000",
-      tag: "#수박 #과일 #당진",
+      region: "전북",
+      content: "2주 무주 사과 열매 솎기",
+      pay: "110,000",
+      tag: "#사과 #과일 #무주",
     },
   ];
 
@@ -107,9 +107,22 @@ export const Tab = () => {
           <div className="flex flex-row py-4">
             <div className="mr-4 w-48 h-28 bg-main-mid-green rounded-2xl"></div>
             <div>
+              <div className="font-bold">울산</div>
+              <div>서생배 적과 및 봉지씌우기</div>
+              <div className="text-main-mid-green font-bold">
+                일당 110,000원
+              </div>
+              <div>#울산 #배 #봉지씌우기</div>
+            </div>
+          </div>
+          <div className="flex flex-row py-4">
+            <div className="mr-4 w-48 h-28 bg-main-mid-green rounded-2xl"></div>
+            <div>
               <div className="font-bold">충남</div>
               <div>2박 3일 강원도에서 감자 심기</div>
-              <div>일당 100,000원</div>
+              <div className="text-main-mid-green font-bold">
+                일당 100,000원
+              </div>
               <div>#감자 #강원도</div>
             </div>
           </div>
