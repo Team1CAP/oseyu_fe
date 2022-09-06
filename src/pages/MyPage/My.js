@@ -1,10 +1,15 @@
 import React from "react";
 import NewHeader from "../../components/NewHeader";
+import { useNavigate } from "react-router-dom";
+
+const MYLIST =
+  "px-5 py-5 border-b-2 hover:cursor-pointer font-bold border-gray-100";
 
 function My() {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="px-5">
+      <div className="px-7">
         <NewHeader headText={"MY"} />
       </div>
       <div className="flex flex-col items-center border-b-8 border-main-light-yellow">
@@ -21,20 +26,19 @@ function My() {
           </button>
         </div>
       </div>
-      <div className="text-left">
-        <div className="px-5 py-5 border-b-2 font-bold border-gray-100">
-          신청 내역
-        </div>
-        <div className="px-5 py-5 border-b-2 font-bold border-gray-100">
-          구인 내역
-        </div>
-        <div className="px-5 py-5 border-b-2 font-bold border-gray-100">
+      <ul className="text-left">
+        <li className={MYLIST}>신청 내역</li>
+        <li className={MYLIST}>구인 내역</li>
+        <li
+          className={MYLIST}
+          onClick={() => {
+            navigate("/recruit");
+          }}
+        >
           구인 등록
-        </div>
-        <div className="px-5 py-5 border-b-2 font-bold border-gray-100">
-          북마크
-        </div>
-      </div>
+        </li>
+        <li className={MYLIST}>북마크</li>
+      </ul>
     </div>
   );
 }
