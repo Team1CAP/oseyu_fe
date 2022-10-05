@@ -1,70 +1,32 @@
 import { useNavigate } from "react-router-dom";
+import { KAKAO_AUTH_URL } from "../../Auth/OAuth";
 
 const Login = () => {
-  const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center">
-      <div className="text-5xl font-bold  text-main-dark-green mt-32">
-        OSEYU
-      </div>
-      <form className="w-full max-w-sm mt-28">
-        <div className="mb-6">
-          <div className="">
-            <label
-              className="block text-gray-500 font-bold text-left mb-1 pr-4"
-              for="inline-full-name"
-            >
-              ID
-            </label>
-          </div>
-          <div>
-            <input
-              className="shadow appearance-none border-2 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-main-mid-green"
-              id="inline-full-name"
-              type="text"
-              placeholder="Seunghwan Kim"
-            />
-          </div>
-        </div>
-        <div className="mb-6">
-          <div>
-            <label
-              className="block text-gray-500 font-bold text-left mb-1 pr-4"
-              for="inline-password"
-            >
-              Password
-            </label>
-          </div>
-          <div>
-            <input
-              className="shadow  appearance-none border-2  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white  focus:border-main-mid-green"
-              id="inline-password"
-              type="password"
-              placeholder="********"
-            />
-          </div>
-        </div>
-        <div className="mb-6">
-          <label className="block text-gray-500 font-bold text-left">
-            <span className="font-bold text-sm text-blue-500 hover:text-blue-800">
-              비밀번호를 잊어버리셨나요?
-            </span>
-          </label>
-        </div>
+    <div className="flex flex-col h-screen items-center justify-around bg-main-light-yellow">
+      <div className="text-5xl font-bold  text-main-dark-green">OSEYU</div>
+      <a
+        href={KAKAO_AUTH_URL}
+        className="cursor-pointer bg-[#FEE500] text-black font-bold py-3 px-13 w-60 rounded flex justify-center"
+        type="button"
+      >
         <div>
-          <div>
-            <button
-              className="shadow bg-main-dark-green hover:bg-main-mid-green focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-              type="button"
-              onClick={() => {
-                navigate("/main");
-              }}
-            >
-              시작하기
-            </button>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-6 mr-3"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.337 21.718a6.707 6.707 0 01-.533-.074.75.75 0 01-.44-1.223 3.73 3.73 0 00.814-1.686c.023-.115-.022-.317-.254-.543C3.274 16.587 2.25 14.41 2.25 12c0-5.03 4.428-9 9.75-9s9.75 3.97 9.75 9c0 5.03-4.428 9-9.75 9-.833 0-1.643-.097-2.417-.279a6.721 6.721 0 01-4.246.997z"
+              clipRule="evenodd"
+            />
+          </svg>
         </div>
-      </form>
+
+        <div>카카오 로그인</div>
+      </a>
     </div>
   );
 };

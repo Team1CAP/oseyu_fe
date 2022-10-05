@@ -7,6 +7,7 @@ import Landing from "../pages/LandingPage/Landing";
 import Admin from "../pages/AdminPage/Admin";
 import My from "../pages/MyPage/My";
 import Recruit from "../pages/RecruitPage/Recruit";
+import Callback from "../pages/LoginPage/Callback";
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/my" element={<My />} />
         <Route path="/recruit" element={<Recruit />} />
+        <Route path="/callback" element={<Callback />} />
       </Routes>
     </BrowserRouter>
   );
