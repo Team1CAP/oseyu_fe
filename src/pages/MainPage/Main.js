@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Tab } from "../../components/Tab";
-
+import { userDataState } from "../LoginPage/Callback";
+import { atom, useRecoilState } from "recoil";
 const Main = () => {
   const navigate = useNavigate();
+  const [userData, setUserData] = useRecoilState(userDataState);
+  console.log(userData);
   return (
     <>
       {/* header  */}
