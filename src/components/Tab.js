@@ -88,9 +88,9 @@ export const Tab = () => {
         <div>
           {/* <p>{menuArr[currentTab].content}</p> */}
 
-          {jobArr.map((data) => {
+          {jobArr.map((data, index) => {
             return (
-              <div className="flex flex-row py-4">
+              <div className="flex flex-row py-4" key={index}>
                 <div className="mr-4 w-48 h-28 bg-main-yellow rounded-2xl"></div>
                 <div>
                   <div className="font-bold">{data.region}</div>
